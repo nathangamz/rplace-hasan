@@ -60,29 +60,27 @@ function place_square() {
         square.dataset.cy = rplace.initial_x + (col_number + 1);
 
         var squareColor = "color";
-        switch (value) {
-            case 1:
-                squareColor = "Orange";
-                break;
-            case 2:
-                squareColor = "Black";
-                break;
-            case 3:
-                squareColor = "color (Dark Gray)";
-                break;
-            case 4:
-                squareColor = "color (Light Gray)";
-                break;
-            case 5:
-                squareColor = "color (White)";
-                break;
-            default:
-                break;
+        colorDictionary = {
+            1: "Red",
+            2: "Black",
+            3: "Dark Grey",
+            4: "Brown",
+            5: "Light Grey",
+            6: "Orange",
+            7: "White",
+            8: "Purple",
+            9: "Pink",
+            10: "Dark Blue"
+        };
+        
+        if (value in colorDictionary){
+            squareColor = colorDictionary[value];
         }
 
         square.dataset.color_name = squareColor;
 
         square.addEventListener("click", e => get_value(e));
+        square.addEventListener("mouseover", e => onTileHovered(e.target.dataset.cx, e.target.dataset.cy));
         canvas_row.append(square);
     }
 

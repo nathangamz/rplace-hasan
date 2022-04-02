@@ -2,22 +2,22 @@
     --square_width: 7px;
     --square_height: 7px;
 
-    --square_color_1: #FF4500;
-    --square_color_2: #000000;
-    --square_color_3: #898d90;
-    --square_color_4: #d4d7d9;
-    --square_color_5: #ffffff;
-    --square_color_6: #FFA800;
-    --square_color_7: #FFD635;
-    --square_color_8: #00A368;
-    --square_color_9: #7EED56;
-    --square_color_10: #2450A4;
-    --square_color_11: #3690EA;
-    --square_color_12: #51E9F4;
-    --square_color_13: #811E9F;
-    --square_color_14: #B44AC0;
-    --square_color_15: #FF99AA;
-    --square_color_16: #9C6926;
+    --square_color_1: rgb(255, 69, 0);
+    --square_color_2: rgb(0, 0, 0);
+    --square_color_3: rgb(137, 141, 144);
+    --square_color_4: rgb(156, 105, 38);
+    --square_color_5: rgb(212, 215, 217);
+    --square_color_6: rgb(255, 168, 0);
+    --square_color_7: rgb(255, 255, 255);
+    --square_color_8: rgb(129, 30, 159);
+    --square_color_9: rgb(255, 153, 170);
+    --square_color_10: rgb(36, 80, 164);
+    --square_color_13: rgb(255, 214, 53);
+    --square_color_15: rgb(0, 163, 104);
+    --square_color_16: rgb(126, 237, 86);
+    --square_color_11: rgb(54, 144, 234);
+    --square_color_12: rgb(81, 233, 244);
+    --square_color_14: rgb(180, 74, 192);
 }
 
 
@@ -114,4 +114,19 @@
 
 .square_color_16 {
     background-color: var(--square_color_16);
+}
+.info{
+    color: black;
+    position: absolute;
+    background-color: white;
+    font-family: monospace;
+    z-index: 2;
+    border-radius: 8px;
+    height: 20px;
+    font-size: 16px;
+    width: 100px;
+    pointer-events: none;
+    text-align: center;
+    border: solid 1px black;
+    outline: solid 1px white;
 }
