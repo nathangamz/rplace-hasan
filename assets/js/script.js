@@ -83,7 +83,7 @@ function place_square() {
         cy = val.target.dataset.cx;
         cx = val.target.dataset.cy;
         link = 'https://www.reddit.com/r/place/?cx=' + cx + '&cy=' + cy + '&px=146';
-        window.location.href = "link";
+        window.location.href = link;
     }
 
 }
