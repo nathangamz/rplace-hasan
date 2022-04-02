@@ -27,6 +27,13 @@ flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data)
     place_square();
 });
 
+function onTileHovered(x, y) {
+    const pos = document.getElementById("pos");
+    pos.innerText = "[" + (x + rplace.initial_x) + ", " + (y + rplace.ini) + "]";
+    pos.style.left = x * 8 + 16 + "px";
+    pos.style.top = y * 8 - 6 + "px";
+  }
+
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
 
@@ -52,28 +59,28 @@ function place_square() {
         square.dataset.cx = rplace.initial_y + row_number;
         square.dataset.cy = rplace.initial_x + (col_number + 1);
 
-        var rplace_color_no = "color";
+        var squareColor = "color";
         switch (value) {
             case 1:
-                rplace_color_no = "1. color (Orange)";
+                squareColor = "Orange";
                 break;
             case 2:
-                rplace_color_no = "13. color (Black)";
+                squareColor = "Black";
                 break;
             case 3:
-                rplace_color_no = "14. color (Dark Gray)";
+                squareColor = "color (Dark Gray)";
                 break;
             case 4:
-                rplace_color_no = "15. color (Light Gray)";
+                squareColor = "color (Light Gray)";
                 break;
             case 5:
-                rplace_color_no = "16. color (White)";
+                squareColor = "color (White)";
                 break;
             default:
                 break;
         }
 
-        square.dataset.color_name = rplace_color_no;
+        square.dataset.color_name = squareColor;
 
         square.addEventListener("click", e => get_value(e));
         canvas_row.append(square);
