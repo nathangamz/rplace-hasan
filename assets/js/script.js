@@ -14,11 +14,6 @@ var canvas = {
     height: 121
 }
 
-var coordinate_plane = document.getElementById("coordinate_plane");
-var coords = document.getElementById("coords");
-var link_field = document.getElementById("link");
-var color_field = document.getElementById("color_field");
-var color_name_field = document.getElementById("color_name");
 var flag_pixelart = null;
 flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data) {
     flag_pixelart = data;
@@ -35,7 +30,6 @@ function onTileHovered(x, y) {
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
 
-    var inner_row = canvas.height;
     row_number = 0;
     col_number = 0;
 
@@ -53,10 +47,9 @@ function place_square() {
         var square = document.createElement("div");
         square.classList.add("square");
         square.classList.add(color[value]);
-        square.dataset.color = color[value];
         square.dataset.cx = rplace.initial_y + row_number;
         square.dataset.cy = rplace.initial_x + (col_number + 1);
-        square.href = 'https://www.reddit.com/r/place/?cx=' + cx + '&cy=' + cy + '&px=146'
+        square.href = 'https://www.reddit.com/r/place/?cx=' + square.dataset.cx + '&cy=' + square.dataset.cy + '&px=146'
 
         square.addEventListener("mouseover", onTileHovered(square.dataset.cx, square.dataset.cy));
         canvas_row.append(square);
