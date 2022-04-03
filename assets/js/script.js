@@ -10,8 +10,8 @@ var rplace = {
 }
 
 var canvas = {
-    width: 128,
-    height: 64
+    width: 200,
+    height: 200
 }
 
 var flag_pixelart = null;
