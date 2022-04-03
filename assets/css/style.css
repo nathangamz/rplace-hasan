@@ -22,8 +22,8 @@
 
 
 #place_canvas {
-    width: calc(var(--square_width) * 151);
-    height: calc(var(--square_height) * 121);
+    width: calc(var(--square_width) * 128);
+    height: calc(var(--square_height) * 64);
     background-color: #fff;
     padding: 0;
     box-sizing: border-box;
@@ -51,7 +51,7 @@
 .square:hover {
     opacity: 0.7;
 }
-
+/* 
 .square_color_1 {
     background-color: var(--square_color_1);
 }
@@ -114,7 +114,7 @@
 
 .square_color_16 {
     background-color: var(--square_color_16);
-}
+} */
 .info{
     color: black;
     position: absolute;
