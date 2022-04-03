@@ -5,8 +5,8 @@ for (let index = 0; index < 16; index++) {
 }
 
 var rplace = {
-    initial_x: 299,
-    initial_y: 318,
+    initial_x: 1701,
+    initial_y: 426,
 }
 
 var canvas = {
