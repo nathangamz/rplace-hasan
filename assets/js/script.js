@@ -24,8 +24,8 @@ flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data)
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
 
-    row_number = 0;
-    col_number = 0;
+    var row_number = 0;
+    var col_number = 0;
 
     for (var [onechar, value] of Object.entries(flag_pixelart.map)) {
 
