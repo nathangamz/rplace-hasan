@@ -25,6 +25,13 @@ flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data)
     place_square();
 });
 
+function onTileHovered(x, y) {
+    const pos = document.getElementById("pos");
+    pos.innerText = "[" + (x + 299) + ", " + (y + 343) + "]";
+    pos.style.left = x * 8 + 16 + "px";
+    pos.style.top = y * 8 - 6 + "px";
+  }
+
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
 
@@ -38,10 +45,6 @@ function place_square() {
         if (Number.isInteger(onechar / canvas.width)) {
             col_number = 0;
             row_number++;
-            var canvas_row = document.createElement("div");
-            canvas_row.classList.add("canvas_row");
-            canvas_row.dataset.cy = row_number;
-            place_canvas.append(canvas_row);
         }
         var square = document.createElement("div");
         square.classList.add("square");
@@ -51,21 +54,8 @@ function place_square() {
         square.dataset.cy = rplace.initial_x + (col_number + 1);
 
 
-        square.addEventListener("click", e => get_value(e));
+        square.addEventListener("mouseover", onTileHovered(square.dataset.cx, square.dataset.cy));
         canvas_row.append(square);
-    }
-
-    function get_value(val) {
-        cy = val.target.dataset.cx;
-        cx = val.target.dataset.cy;
-        link = 'https://www.reddit.com/r/place/?cx=' + cx + '&cy=' + cy + '&px=146';
-        color = val.target.dataset.color;
-        color_name = val.target.dataset.color_name;
-        coords.innerHTML = '( ' + cx + ' , ' + cy + ' )';
-        link_field.innerHTML = 'r/place link: <a target="_blank" href="' + link + '">' + link + '</a>';
-        color_field.setAttribute("class", "");
-        color_field.classList.add(color);
-        color_name_field.innerHTML = color_name;
     }
 
 }
