@@ -38,13 +38,13 @@ function place_square() {
             canvas_row.dataset.cy = row_number;
             place_canvas.append(canvas_row);
         }
-        var square = document.createElement("div");
+        var square = document.createElement("a");
         square.classList.add("square");
         square.classList.add(color[value]);
         var cx = (rplace.initial_x + (col_number + 1));
         var cy = (rplace.initial_y + row_number)
-        var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
-        square.setAttribute("onmouseover", "onTileHovered(" + cx + ", " + cy + ")");
+        var link = `https://www.new.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
+        square.setAttribute("onmouseover", "onTileHovered(" + col_number + ", " + row_number + ")");
         square.setAttribute("href", link);
 
 
