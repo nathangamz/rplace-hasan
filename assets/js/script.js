@@ -7,8 +7,6 @@ for (let index = 0; index < 16; index++) {
 var rplace = {
     initial_x: 299,
     initial_y: 318,
-    final_x: 432,
-    final_y: 399,
 }
 
 var canvas = {
@@ -52,28 +50,6 @@ function place_square() {
         square.dataset.cx = rplace.initial_y + row_number;
         square.dataset.cy = rplace.initial_x + (col_number + 1);
 
-        var rplace_color_no = "color";
-        switch (value) {
-            case 1:
-                rplace_color_no = "1. color (Orange)";
-                break;
-            case 2:
-                rplace_color_no = "13. color (Black)";
-                break;
-            case 3:
-                rplace_color_no = "14. color (Dark Gray)";
-                break;
-            case 4:
-                rplace_color_no = "15. color (Light Gray)";
-                break;
-            case 5:
-                rplace_color_no = "16. color (White)";
-                break;
-            default:
-                break;
-        }
-
-        square.dataset.color_name = rplace_color_no;
 
         square.addEventListener("click", e => get_value(e));
         canvas_row.append(square);
