@@ -53,7 +53,8 @@ function place_square() {
             pos.style.left = x * 8 + 16 + "px";
             pos.style.top = y * 8 - 6 + "px";
           }
-        square.addEventListener("mouseover", onTileHovered(cx, cy), false);
+        square.addEventListener("mouseover", onTileHovered(row_number, col_number), false);
+
 
         canvas_row.append(square);
     }
