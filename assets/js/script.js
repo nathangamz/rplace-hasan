@@ -41,9 +41,9 @@ function place_square() {
         var square = document.createElement("div");
         square.classList.add("square");
         square.classList.add(color[value]);
-        cx = (rplace.initial_x + (col_number + 1));
-        cy = (rplace.initial_y + row_number)
-        link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
+        var cx = (rplace.initial_x + (col_number + 1));
+        var cy = (rplace.initial_y + row_number)
+        var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
         square.addEventListener('click', function() {
             location.href = link
         }, false);
@@ -53,7 +53,7 @@ function place_square() {
             pos.style.left = x * 8 + 16 + "px";
             pos.style.top = y * 8 - 6 + "px";
           }
-        square.addEventListener("mouseover", onTileHovered(row_number, col_number), false);
+        square.addEventListener("mouseover", onTileHovered(col_number, row_number), false);
 
 
         canvas_row.append(square);
