@@ -41,8 +41,12 @@ function place_square() {
         var square = document.createElement("div");
         square.classList.add("square");
         square.classList.add(color[value]);
-        square.dataset.cx = rplace.initial_x + (col_number + 1);
-        square.dataset.cy = rplace.initial_y + row_number;
+        cx = rplace.initial_x + (col_number + 1);
+        cy = rplace.initial_y + row_number;
+        link = 'https://www.reddit.com/r/place/?cx=' + cx + '&cy=' + cy + '&px=50'
+        square.addEventListener('click', function() {
+            location.href = link
+        }, false);
         function onTileHovered(x, y) {
             const pos = document.getElementById("pos");
             pos.innerText = "[" + (x + 1701) + ", " + (y + 426) + "]";
@@ -51,9 +55,6 @@ function place_square() {
           }
         square.addEventListener("mouseover", onTileHovered(row_number, col_number), false);
 
-        square.addEventListener('click', function() {
-            location.href = 'https://www.reddit.com/r/place/?cx=' + square.dataset.cx + '&cy=' + square.dataset.cy + '&px=146'
-        }, false);
 
         canvas_row.append(square);
     }
