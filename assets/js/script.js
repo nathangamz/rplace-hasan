@@ -5,8 +5,8 @@ for (let index = 0; index < 16; index++) {
 }
 
 var rplace = {
-    initial_x: 1701,
-    initial_y: 426,
+    initial_x: 726,
+    initial_y: 1176,
 }
 
 var canvas = {
@@ -40,7 +40,7 @@ function place_square() {
         }
         var square = document.createElement("a");
         square.classList.add("square");
-        square.classList.add(color[value]);
+        square.style.backgroundColor = "rgb(" + value[0] + "," + value[1] + "," + value[2] + ")"
         var cx = (rplace.initial_x + (col_number + 1));
         var cy = (rplace.initial_y + row_number)
         var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
