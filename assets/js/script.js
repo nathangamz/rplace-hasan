@@ -41,8 +41,8 @@ function place_square() {
         var square = document.createElement("div");
         square.classList.add("square");
         square.classList.add(color[value]);
-        square.dataset.cx = rplace.initial_x + row_number;
-        square.dataset.cy = rplace.initial_y + (col_number + 1);
+        square.dataset.cx = rplace.initial_x + (col_number + 1);
+        square.dataset.cy = rplace.initial_y + row_number;
         function onTileHovered(x, y) {
             const pos = document.getElementById("pos");
             pos.innerText = "[" + (x + 1701) + ", " + (y + 426) + "]";
