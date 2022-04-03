@@ -1,6 +1,6 @@
 :root {
-    --square_width: 6px;
-    --square_height: 6px;
+    --square_width: 8px;
+    --square_height: 8px;
 
     --square_color_1: rgb(255, 69, 0);
     --square_color_2: rgb(0, 0, 0);
