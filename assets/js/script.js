@@ -44,15 +44,6 @@ function place_square() {
         var cx = (rplace.initial_x + (col_number + 1));
         var cy = (rplace.initial_y + row_number)
         var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
-        square.addEventListener('click', function() {
-            location.href = link
-        }, false);
-        function onTileHovered(x, y) {
-            const pos = document.getElementById("pos");
-            pos.innerText = "[" + (x + 1701) + ", " + (y + 426) + "]";
-            pos.style.left = x * 8 + 16 + "px";
-            pos.style.top = y * 8 - 6 + "px";
-          }
         square.setAttribute("onmouseover", "onTileHovered(" + cx + ", " + cy + ")");
         square.setAttribute("href", link);
 
