@@ -12,11 +12,9 @@
     <script>
         function onTileHovered(x, y) {
             const pos = document.getElementById("pos");
-            realX = x - 1701;
-            realY = y - 426;
             pos.innerText = "[" + (x + 1701) + ", " + (y + 426) + "]";
-            pos.style.left = realX * 8 + 16 + "px";
-            pos.style.top = realY * 8 - 6 + "px";
+            pos.style.left = x * 8 + 16 + "px";
+            pos.style.top = y * 8 - 6 + "px";
           }
     </script>
 </head>

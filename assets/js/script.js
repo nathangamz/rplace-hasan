@@ -44,7 +44,7 @@ function place_square() {
         var cx = (rplace.initial_x + (col_number + 1));
         var cy = (rplace.initial_y + row_number)
         var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
-        square.setAttribute("onmouseover", "onTileHovered(" + cx + ", " + cy + ")");
+        square.setAttribute("onmouseover", "onTileHovered(" + col_number + ", " + row_number + ")");
         square.setAttribute("href", link);
 
 
