@@ -1,6 +1,6 @@
 :root {
-    --square_width: 7px;
-    --square_height: 7px;
+    --square_width: 8px;
+    --square_height: 8px;
 
     --square_color_1: rgb(255, 69, 0);
     --square_color_2: rgb(0, 0, 0);
@@ -22,8 +22,8 @@
 
 
 #place_canvas {
-    width: calc(var(--square_width) * 133);
-    height: calc(var(--square_height) * 81);
+    width: calc(var(--square_width) * 151);
+    height: calc(var(--square_height) * 121);
     background-color: #fff;
     padding: 0;
     box-sizing: border-box;
