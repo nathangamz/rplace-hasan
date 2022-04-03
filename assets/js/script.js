@@ -41,9 +41,7 @@ function place_square() {
         var square = document.createElement("div");
         square.classList.add("square");
         square.classList.add(color[value]);
-        cx = rplace.initial_x + (col_number + 1);
-        cy = rplace.initial_y + row_number;
-        link = 'https://www.reddit.com/r/place/?cx=' + cx + '&cy=' + cy + '&px=50'
+        link = 'https://www.reddit.com/r/place/?cx=' + rplace.initial_x + (col_number + 1); + '&cy=' + rplace.initial_y + row_number + '&px=50'
         square.addEventListener('click', function() {
             location.href = link
         }, false);
