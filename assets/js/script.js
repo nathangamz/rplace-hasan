@@ -51,7 +51,7 @@ function place_square() {
         square.dataset.cy = rplace.initial_x + (col_number + 1);
         square.href = 'https://www.reddit.com/r/place/?cx=' + square.dataset.cx + '&cy=' + square.dataset.cy + '&px=146'
 
-        square.addEventListener("mouseover", onTileHovered(square.dataset.cx, square.dataset.cy));
+        square.addEventListener("mouseover", onTileHovered(row_number, col_number));
         canvas_row.append(square);
     }
 
