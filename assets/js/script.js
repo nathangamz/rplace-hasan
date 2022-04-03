@@ -45,6 +45,10 @@ function place_square() {
         if (Number.isInteger(onechar / canvas.width)) {
             col_number = 0;
             row_number++;
+            var canvas_row = document.createElement("div");
+            canvas_row.classList.add("canvas_row");
+            canvas_row.dataset.cy = row_number;
+            place_canvas.append(canvas_row);
         }
         var square = document.createElement("div");
         square.classList.add("square");
