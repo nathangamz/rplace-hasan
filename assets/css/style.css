@@ -21,9 +21,18 @@
 }
 
 
-#place_canvas {
+#place_canvas_cussy {
     width: calc(var(--square_width) * 128);
     height: calc(var(--square_height) * 64);
+    background-color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#place_canvas_hasbulla {
+    width: calc(var(--square_width) * 250);
+    height: calc(var(--square_height) * 250);
     background-color: #fff;
     padding: 0;
     box-sizing: border-box;
