@@ -43,7 +43,14 @@ function place_square() {
         square.classList.add(color[value]);
         square.dataset.cx = rplace.initial_y + row_number;
         square.dataset.cy = rplace.initial_x + (col_number + 1);
+        function onTileHovered(x, y) {
+            const pos = document.getElementById("pos");
+            pos.innerText = "[" + (x + 1701) + ", " + (y + 426) + "]";
+            pos.style.left = x * 8 + 16 + "px";
+            pos.style.top = y * 8 - 6 + "px";
+          }
         square.addEventListener("mouseover", onTileHovered(row_number, col_number), false);
+
         square.addEventListener('click', function() {
             location.href = 'https://www.reddit.com/r/place/?cx=' + square.dataset.cx + '&cy=' + square.dataset.cy + '&px=146'
         }, false);
