@@ -12,8 +12,8 @@ var rplace = {
 }
 
 var canvas = {
-    width: 133,
-    height: 81
+    width: 151,
+    height: 121
 }
 
 var coordinate_plane = document.getElementById("coordinate_plane");
@@ -26,13 +26,6 @@ flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data)
     flag_pixelart = data;
     place_square();
 });
-
-function onTileHovered(x, y) {
-    const pos = document.getElementById("pos");
-    pos.innerText = "[" + (x + rplace.initial_x) + ", " + (y + rplace.ini) + "]";
-    pos.style.left = x * 8 + 16 + "px";
-    pos.style.top = y * 8 - 6 + "px";
-  }
 
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
@@ -59,28 +52,30 @@ function place_square() {
         square.dataset.cx = rplace.initial_y + row_number;
         square.dataset.cy = rplace.initial_x + (col_number + 1);
 
-        var squareColor = "color";
-        colorDictionary = {
-            1: "Red",
-            2: "Black",
-            3: "Dark Grey",
-            4: "Brown",
-            5: "Light Grey",
-            6: "Orange",
-            7: "White",
-            8: "Purple",
-            9: "Pink",
-            10: "Dark Blue"
-        };
-        
-        if (value in colorDictionary){
-            squareColor = colorDictionary[value];
+        var rplace_color_no = "color";
+        switch (value) {
+            case 1:
+                rplace_color_no = "1. color (Orange)";
+                break;
+            case 2:
+                rplace_color_no = "13. color (Black)";
+                break;
+            case 3:
+                rplace_color_no = "14. color (Dark Gray)";
+                break;
+            case 4:
+                rplace_color_no = "15. color (Light Gray)";
+                break;
+            case 5:
+                rplace_color_no = "16. color (White)";
+                break;
+            default:
+                break;
         }
 
-        square.dataset.color_name = squareColor;
+        square.dataset.color_name = rplace_color_no;
 
         square.addEventListener("click", e => get_value(e));
-        square.addEventListener("mouseover", e => onTileHovered(e.target.dataset.cx, e.target.dataset.cy));
         canvas_row.append(square);
     }
 
@@ -88,7 +83,13 @@ function place_square() {
         cy = val.target.dataset.cx;
         cx = val.target.dataset.cy;
         link = 'https://www.reddit.com/r/place/?cx=' + cx + '&cy=' + cy + '&px=146';
-        window.location.href = link;
+        color = val.target.dataset.color;
+        color_name = val.target.dataset.color_name;
+        coords.innerHTML = '( ' + cx + ' , ' + cy + ' )';
+        link_field.innerHTML = 'r/place link: <a target="_blank" href="' + link + '">' + link + '</a>';
+        color_field.setAttribute("class", "");
+        color_field.classList.add(color);
+        color_name_field.innerHTML = color_name;
     }
 
 }
