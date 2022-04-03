@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <script>
+        function onTileHovered(x, y) {
+            const pos = document.getElementById("pos");
+            pos.innerText = "[" + (x + 299) + ", " + (y + 343) + "]";
+            pos.style.left = x * 8 + 16 + "px";
+            pos.style.top = y * 8 - 6 + "px";
+          }
+    </script>
     <div id="pos" class="info">[999,999]</div> 
 
     <div id="place_canvas">
