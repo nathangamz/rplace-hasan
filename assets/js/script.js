@@ -4,9 +4,14 @@ for (let index = 0; index < 16; index++) {
     color[val] = 'square_color_' + val;
 }
 
-var rplace = {
+var rplace_hasbulla = {
     initial_x: 0,
     initial_y: 1345,
+}
+
+var rplace_cussy = {
+    initial_x: 748,
+    initial_y: 1177,
 }
 
 var canvas_cussy = {
@@ -22,16 +27,16 @@ var canvas_hasbulla = {
 var cussy_pixelart = null;
 cussy_pixelart_json = $.getJSON('assets/json/cussy.json', function (data) {
     cussy_pixelart = data;
-    place_square(canvas_cussy.width, cussy_pixelart, "place_canvas_cussy");
+    place_square(canvas_cussy.width, cussy_pixelart, "place_canvas_cussy", rplace_cussy);
 });
 var hasbulla_pixelart = null;
 hasbulla_pixelart_json = $.getJSON('assets/json/hasbulla.json', function (data) {
     hasbulla_pixelart = data;
-    place_square(canvas_hasbulla.width, hasbulla_pixelart, "place_canvas_hasbulla");
+    place_square(canvas_hasbulla.width, hasbulla_pixelart, "place_canvas_hasbulla", rplace_hasbulla);
 });
 
 
-function place_square(width, jsonData, element) {
+function place_square(width, jsonData, element, rplace) {
     var place_canvas = document.getElementById(element);
 
     var row_number = 0;
