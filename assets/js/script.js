@@ -15,7 +15,7 @@ var canvas = {
 }
 
 var flag_pixelart = null;
-flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data) {
+flag_pixelart_json = $.getJSON('assets/json/hasbulla.json', function (data) {
     flag_pixelart = data;
     place_square();
 });
