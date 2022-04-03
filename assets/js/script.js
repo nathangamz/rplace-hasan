@@ -19,6 +19,12 @@ flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data)
     flag_pixelart = data;
     place_square();
 });
+function onTileHovered(x, y) {
+    const pos = document.getElementById("pos");
+    pos.innerText = "[" + (x + 299) + ", " + (y + 343) + "]";
+    pos.style.left = x * 8 + 16 + "px";
+    pos.style.top = y * 8 - 6 + "px";
+  }
 
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
@@ -44,7 +50,7 @@ function place_square() {
         square.dataset.cy = rplace.initial_x + (col_number + 1);
         square.href = 'https://www.reddit.com/r/place/?cx=' + square.dataset.cx + '&cy=' + square.dataset.cy + '&px=146'
 
-        square.addEventListener("onmouseover", onTileHovered(row_number, col_number));
+        square.addEventListener("mouseover", onTileHovered(row_number, col_number));
         canvas_row.append(square);
     }
 
