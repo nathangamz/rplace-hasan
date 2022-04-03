@@ -19,12 +19,7 @@ flag_pixelart_json = $.getJSON('assets/json/flag_pixelart.json', function (data)
     flag_pixelart = data;
     place_square();
 });
-function onTileHovered(x, y) {
-    const pos = document.getElementById("pos");
-    pos.innerText = "[" + (x + 299) + ", " + (y + 343) + "]";
-    pos.style.left = x * 8 + 16 + "px";
-    pos.style.top = y * 8 - 6 + "px";
-  }
+
 
 function place_square() {
     var place_canvas = document.getElementById("place_canvas");
