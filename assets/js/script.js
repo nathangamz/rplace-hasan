@@ -43,8 +43,8 @@ function place_square() {
         square.classList.add(color[value]);
         var cx = (rplace.initial_x + (col_number + 1));
         var cy = (rplace.initial_y + row_number)
-        var link = `https://www.new.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
-        square.setAttribute("onmouseover", "onTileHovered(" + col_number + ", " + row_number + ")");
+        var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
+        square.setAttribute("onmouseover", "onTileHovered(" + cx + ", " + cy + ")");
         square.setAttribute("href", link);
 
 
