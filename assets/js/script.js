@@ -11,7 +11,7 @@ var rplace_hasbulla = {
 
 var rplace_cussy = {
     initial_x: 732,
-    initial_y: 1174,
+    initial_y: 1173,
 }
 
 var canvas_cussy = {
@@ -37,7 +37,7 @@ cussy_pixelart_json = $.getJSON('assets/json/cussy.json', function (data) {
 
 function onTileHovered(x, y) {
     const pos = document.getElementById("pos");
-    pos.innerText = "[" + (x + 732) + ", " + (y + 1174) + "]";
+    pos.innerText = "[" + (x + 732) + ", " + (y + 1173) + "]";
     pos.style.left = x * 8 + 16 + "px";
     pos.style.top = y * 8 - 4 + "px"
   };
