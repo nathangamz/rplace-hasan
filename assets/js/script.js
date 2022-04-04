@@ -24,6 +24,7 @@ var canvas_hasbulla = {
     height: 250
 }
 
+
 var cussy_pixelart = null;
 cussy_pixelart_json = $.getJSON('assets/json/marx.json', function (data) {
     cussy_pixelart = data;
