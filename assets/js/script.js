@@ -11,7 +11,7 @@ var rplace_hasbulla = {
 
 var rplace_cussy = {
     initial_x: 786,
-    initial_y: 1174,
+    initial_y: 1173,
 }
 
 var canvas_cussy = {
@@ -23,7 +23,6 @@ var canvas_hasbulla = {
     width: 250,
     height: 250
 }
-
 
 var cussy_pixelart = null;
 cussy_pixelart_json = $.getJSON('assets/json/marx.json', function (data) {
