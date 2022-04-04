@@ -10,8 +10,8 @@ var rplace_hasbulla = {
 }
 
 var rplace_cussy = {
-    initial_x: 737,
-    initial_y: 1178,
+    initial_x: 732,
+    initial_y: 1174,
 }
 
 var canvas_cussy = {
