@@ -22,8 +22,8 @@
 
 
 #place_canvas_cussy {
-    width: calc(var(--square_width) * 128);
-    height: calc(var(--square_height) * 64);
+    width: calc(var(--square_width) * 168);
+    height: calc(var(--square_height) * 104);
     background-color: #fff;
     padding: 0;
     box-sizing: border-box;

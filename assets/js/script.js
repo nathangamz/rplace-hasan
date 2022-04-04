@@ -15,8 +15,8 @@ var rplace_cussy = {
 }
 
 var canvas_cussy = {
-    width: 128,
-    height: 64
+    width: 168,
+    height: 104
 }
 
 var canvas_hasbulla = {
