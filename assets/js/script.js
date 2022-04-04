@@ -37,7 +37,7 @@ cussy_pixelart_json = $.getJSON('assets/json/cussy.json', function (data) {
 
 function onTileHovered(x, y) {
     const pos = document.getElementById("pos");
-    pos.innerText = "[" + (x + 737) + ", " + (y + 1178) + "]";
+    pos.innerText = "[" + (x + 732) + ", " + (y + 1174) + "]";
     pos.style.left = x * 8 + 16 + "px";
     pos.style.top = y * 8 - 4 + "px"
   };
