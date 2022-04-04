@@ -10,13 +10,13 @@ var rplace_hasbulla = {
 }
 
 var rplace_cussy = {
-    initial_x: 732,
-    initial_y: 1173,
+    initial_x: 786,
+    initial_y: 1174,
 }
 
 var canvas_cussy = {
-    width: 168,
-    height: 104
+    width: 25,
+    height: 40
 }
 
 var canvas_hasbulla = {
@@ -25,7 +25,7 @@ var canvas_hasbulla = {
 }
 
 var cussy_pixelart = null;
-cussy_pixelart_json = $.getJSON('assets/json/cussy.json', function (data) {
+cussy_pixelart_json = $.getJSON('assets/json/marx.json', function (data) {
     cussy_pixelart = data;
     place_square(canvas_cussy.width, cussy_pixelart, "place_canvas_cussy", rplace_cussy);
 });
