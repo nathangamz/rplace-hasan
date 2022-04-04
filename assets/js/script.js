@@ -63,7 +63,7 @@ function place_square(width, jsonData, element, rplace) {
         square.style.backgroundColor = "rgb(" + value[0] + "," + value[1] + "," + value[2] + ")"
         var cx = (rplace.initial_x + (col_number + 1));
         var cy = (rplace.initial_y + row_number)
-        var link = `https://www.new.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
+        var link = `https://www.reddit.com/r/place/?cx=${cx}&cy=${cy}&px=50`
         square.setAttribute("onmouseover", "onTileHovered(" + col_number + ", " + row_number + ")");
         square.setAttribute("href", link);
 
