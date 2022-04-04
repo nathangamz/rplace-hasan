@@ -35,7 +35,13 @@ hasbulla_pixelart_json = $.getJSON('assets/json/hasbulla.json', function (data) 
     place_square(canvas_hasbulla.width, hasbulla_pixelart, "place_canvas_hasbulla", rplace_hasbulla);
 });
 
-
+function onTileHovered(x, y) {
+    const pos = document.getElementById("pos");
+    pos.innerText = "[" + (x + 737)) + ", " + (y + 1177) + "]";
+    pos.style.left = x * 8 + 16 + "px";
+    pos.style.top = y * 8 - 4 + "px"
+  }
+  
 function place_square(width, jsonData, element, rplace) {
     var place_canvas = document.getElementById(element);
 
