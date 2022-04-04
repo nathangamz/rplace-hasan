@@ -29,15 +29,15 @@ cussy_pixelart_json = $.getJSON('assets/json/cussy.json', function (data) {
     cussy_pixelart = data;
     place_square(canvas_cussy.width, cussy_pixelart, "place_canvas_cussy", rplace_cussy);
 });
-var hasbulla_pixelart = null;
-hasbulla_pixelart_json = $.getJSON('assets/json/hasbulla.json', function (data) {
-    hasbulla_pixelart = data;
-    place_square(canvas_hasbulla.width, hasbulla_pixelart, "place_canvas_hasbulla", rplace_hasbulla);
-});
+// var hasbulla_pixelart = null;
+// hasbulla_pixelart_json = $.getJSON('assets/json/hasbulla.json', function (data) {
+//     hasbulla_pixelart = data;
+//     place_square(canvas_hasbulla.width, hasbulla_pixelart, "place_canvas_hasbulla", rplace_hasbulla);
+// });
 
 function onTileHovered(x, y) {
     const pos = document.getElementById("pos");
-    pos.innerText = "[" + (x + 737)) + ", " + (y + 1177) + "]";
+    pos.innerText = "[" + (x + 737) + ", " + (y + 1177) + "]";
     pos.style.left = x * 8 + 16 + "px";
     pos.style.top = y * 8 - 4 + "px"
   };
